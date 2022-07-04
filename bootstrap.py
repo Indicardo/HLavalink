@@ -33,7 +33,7 @@ class LavalinkBootstrap:
             
             print("[INFO] Using developer Lavalink version")
         
-        self.download_command = f"curl -L https://ci.fredboat.com/repository/download/Lavalink_Build/9339:id/Lavalink.jar -o Lavalink.jar" if self.use_dev_lavalink else f"curl -L https://ci.fredboat.com/repository/download/Lavalink_Build/8937:id/Lavalink.jar -o Lavalink.jar"
+        self.download_command = f"curl -L https://github.com/freyacodes/Lavalink/releases/download/3.5-rc1/Lavalink.jar -o Lavalink.jar" if self.use_dev_lavalink else f"curl -L https://ci.fredboat.com/repository/download/Lavalink_Build/8937:id/Lavalink.jar -o Lavalink.jar"
         print(f"[INFO] Download command: {self.download_command}")
         
         self.replace_port_command = 'sed -i "s|DYNAMICPORT|$PORT|" application.yml'
